@@ -128,7 +128,12 @@ position: relative;
         display: flex;
         gap: 20px;
         .box {
-
+            img {
+                width: 50%;
+                height: 50vh;
+                display: block;
+                margin: 0 auto;
+            }
             h3 {
                 text-align: center;
                 margin: 0 auto;
@@ -146,7 +151,7 @@ position: relative;
             }
 
             p {
-                text-align: center;
+                text-align: justify;
             }
 
         }
