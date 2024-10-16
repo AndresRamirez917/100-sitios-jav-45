@@ -28,4 +28,44 @@ async function getData(){
         }
     });
 }
+
+let valor = true;
+const btn_learn = document.getElementById('btn-learn');
+const Click = (e) => {
+    e.preventDefault();
+     if(btn_learn.innerHTML == "learn more"){
+         btn_learn.innerHTML = "madre"
+         swal({
+             title: `El nombre del botón ha cambiado`,
+             icon: "warning",
+              })
+              return false;
+     }else btn_learn.innerHTML = "learn more" 
+     swal({
+        title: `El nombre del botón ha vuelto a cambiar`,
+        icon: "success",
+         })
+         return true;
+}
+btn_learn.addEventListener("click", Click)
+
+const btn_access = document.getElementById("btn-access")
+const click2 = (e) => {
+  e.preventDefault();
+  if(btn_access.innerHTML == "apply for access"){
+    btn_access.innerHTML = "acces denied"
+    swal({
+        title: `El nombre del botón ha cambiado`,
+        icon: "warning",
+         })
+         return false;
+}else btn_access.innerHTML = "apply for access"
+swal({
+   title: `El nombre del botón ha vuelto a cambiar`,
+   icon: "success",
+    })
+    return true;
+
+};
+btn_access.addEventListener("click", click2)
 getData()
